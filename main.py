@@ -250,12 +250,12 @@ async def kick_all(ctx):
     members.remove(ctx.me)
     for member in members:
         try:
-            if member.id != id or member.id != id: # the two ids inputed(don't want to share my id)
+            if member.id != id or member.id != id: 
                 await member.kick(reason="deleting server")
                 print("kick ")
             else:
                 print(f"Failed to kick {member}.")
-        except discord.Forbidden: # forbidden error is the error that gets returned when the bot is forbidden to do something(in this case kick itself)
+        except discord.Forbidden: 
             print(f"Failed to kick {member}.")
         continue
 
